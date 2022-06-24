@@ -13,8 +13,6 @@ class UserRoom{
         System.out.println("Choose your room");
         String strings;
         String[] arrString = new String[]{"1", "10", "90", "7", "44"};
-
-
           for (String value : arrString) {
               strings = s.nextLine();
             if (value.equals(strings)) {
