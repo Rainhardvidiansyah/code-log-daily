@@ -1,4 +1,3 @@
-import javax.management.MBeanRegistration;
 import java.util.*;
 
 abstract class User{
@@ -39,14 +38,14 @@ class UserRoom{
 abstract class Room{
     public abstract String chooseRome(int roomNumbers);
 }
-public class AbstractionEx extends User{
+public class AbstractionEx extends Users {
 
 
-    @Override
-    public void writeName(String s) {
-        String a = s.substring(0, s.length() - 1);
-        System.out.println(a);
-    }
+//    @Override
+//    public void writeName(String s) {
+//        String a = s.substring(0, s.length() - 1);
+//        System.out.println(a);
+//    }
 
 
     //main method is starting here
