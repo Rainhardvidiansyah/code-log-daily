@@ -38,11 +38,4 @@ public class Users {
         this.password = password;
     }
 
-    public Builder builder(Users users) {
-        Builder builder = new Builder();
-        builder.setName(users.getName());
-        builder.setEmail(users.getEmail());
-        builder.setPassword(users.getPassword());
-        return builder;
-    }
 }

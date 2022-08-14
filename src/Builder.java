@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Builder {
 
     private String name;
@@ -6,45 +8,19 @@ public class Builder {
 
     private String password;
 
-    public String getName() {
-        return name;
-    }
+    public Builder(){};
 
-    public void setName(String name) {
+    public Builder(String name, String email, String password) {
         this.name = name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
         this.email = email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
         this.password = password;
     }
 
-    //    public static Builder build(String name, String email, String password){
-//        Builder builder = new Builder();
-//        builder.name = name;
-//        builder.email = email;
-//        builder.password = password;
-//        return builder;
-//    }
-//
-    public static Builder builder(Users user){
-        Builder builder = new Builder();
-        builder.name = user.getName();
-        builder.email = user.getEmail();
-        builder.password = user.getPassword();
-        return builder;
+
+    public static Builder builder(Users users){
+        return new Builder(users.getName(), users.getEmail(), users.getPassword());
     }
+
 
     @Override
     public String toString() {
@@ -55,22 +31,23 @@ public class Builder {
                 '}';
     }
 
-    public static void main(String[] args) {
-//        System.out.println(new Builder()
-//                .build("new name", "email@gmail.com", "password"));
-//
-//        new Builder();
-//        System.out.println(build("Hoki", "hoki234", "acatalwaysplays"));
-//
-//        Builder builder = new Builder();
-        Users user = new Users("Money", "money@gmail.com", "money");
-//        System.out.println(builder.builder(user));
-//        System.out.println(user
-//                .getEmail());
 
-        new Builder().builder(user);
-        System.out.println(builder(user));
-        System.out.println(builder(new Users("", "", "")));
+
+    public static void main(String[] args) {
+
+        Scanner s = new Scanner(System.in);
+
+        Users user = new Users("Money", "money@gmail.com", "money");
+        System.out.println(Builder.builder(user));
+        System.out.println("Input: ");
+        System.out.println("name: ");
+        String name = s.nextLine();
+        System.out.println("email: ");
+        String email = s.nextLine();
+        System.out.println("password: ");
+        String password = s.nextLine();
+        Users users = new Users(name, email, password);
+        System.out.println("Data: " + builder(users));
 
 
 
