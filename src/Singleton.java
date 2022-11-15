@@ -11,6 +11,11 @@ public class Singleton {
 
     private Singleton(){}
 
+    @Override
+    public String toString() {
+        return "Singleton{}";
+    }
+
     public static void main(String[] args) {
 
         var s = Singleton.getSingleton();
@@ -25,6 +30,12 @@ public class Singleton {
         var s3 = new Singleton();
         testSameness = s.equals(s3);
         System.out.println(testSameness); //FALSE
+
+        Singleton singleton1 = Singleton.getSingleton();
+        Singleton singleton2 = Singleton.getSingleton();
+        boolean isSame = singleton1.equals(singleton2);
+        System.out.println("Result of is same variable :>> " +isSame);
+
 
     }
 }
