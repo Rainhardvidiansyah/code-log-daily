@@ -27,7 +27,7 @@ public class StreamFilterData {
 
 
         String xx = "MaUlidA";
-        xx.chars().filter(Character::isUpperCase)
+        xx.chars().filter(item -> Character.isUpperCase(item))
                         .forEach(c -> System.out.println((char) c + " "));
     }
 }

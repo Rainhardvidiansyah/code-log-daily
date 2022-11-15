@@ -29,10 +29,10 @@ public class RegularExp {
         System.out.println("The answer is " + a);
 
 
-        double inter = 100000.01;
-        System.out.println(inter);
-        NumberFormat nf = NumberFormat.getInstance(Locale.GERMANY);
-        System.out.println(nf.format(inter));
+        double currency = 100000.00;
+        System.out.println(currency);
+        NumberFormat nf = NumberFormat.getInstance(Locale.US);
+        System.out.println(nf.format(currency));
 
 
 
