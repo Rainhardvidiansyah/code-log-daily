@@ -2,6 +2,7 @@ package cb;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Linkedlist {
 
@@ -20,6 +21,9 @@ public class Linkedlist {
             num += i;
         }
         System.out.println(num);
+        list.clear();
+        System.out.println(list);
+        list.add(21);
 
 
     }
