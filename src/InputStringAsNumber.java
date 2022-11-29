@@ -12,10 +12,16 @@ public class InputStringAsNumber {
         Scanner scanner = new Scanner(System.in);
         String s = scanner.nextLine();
         if(!s.matches("[0-9]+")){
-            throw new IllegalStateException("Password must be contain number");
-        }else{
+            throw new IllegalStateException("Password is less than 8 characters");
+
+        }if(s.length() != 8) { //if s.length less than 8 or bigger than 8 throw false
+            throw new IllegalStateException("Password is less than 8 characters");
+        }
+        else{
             System.out.println(s);
         }
+
+
         System.out.println(checkPassword(s));
 
     }
