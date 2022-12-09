@@ -12,10 +12,10 @@ public class CountRepeatedWords {
 
 
     public static int shortestSubstring(String s) {
-        int x = 0;
-        char[] charArray = s.toCharArray();
+        int x = Integer.MAX_VALUE;
+        char[] charArr = s.toCharArray();
         LinkedHashMap<String, Integer> link = new LinkedHashMap<>();
-        for (char character : charArray)
+        for (char character : charArr)
             if (!link.containsKey(character + "")) {
                 link.put(character + "", 1);
             } else {
